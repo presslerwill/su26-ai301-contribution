@@ -3,13 +3,14 @@
 **Contribution Number:** [1]  
 **Student:** [Will Pressler]  
 **Issue:** [[GitHub issue link](https://github.com/InnerWarden/innerwarden/issues/73)]  
-**Status:** [Phase I] [In Progress]
+**Status:** [Phase I] [Complete]
 
 ---
 
 ## Why I Chose This Issue
 
-[1-2 paragraphs explaining why this issue interests you, how it matches your skills/learning goals, what you hope to learn]
+I chose this issue because of the opportunity it presents for growth. I am interested in learning more about cybersecurity as a software engineer and this project is perfect to start learning. Innerwarden is a security AI agent that autonomously fights against real security threats, so while working on the issue I will get to learn more about cybersecurity and how AI agents interact with security. I have some prior educational experience with cybersecurity, but this will be the first opportunity for me to build skills of a cybersecurity software engineer, not just a regular engineer. 
+Furthermore, I wanted to tackle an issue with a tech stack that is new to me. I want to expand beyond the tech stack I work with on a day to day basis, and this project uses Rust, which is completely new to me. So while working on the issue I hope to learn Rust and be able to contribute more to Rust projects in the future.
 
 ---
 
