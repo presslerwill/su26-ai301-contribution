@@ -1,9 +1,9 @@
-# Contribution [#]: [Issue Title]
+# Contribution [1]: [Add executable entropy analyzer for packed/obfuscated malware detection]
 
-**Contribution Number:** [1 / 2 / 3]  
-**Student:** [Your Name]  
-**Issue:** [GitHub issue link]  
-**Status:** [Phase I / Phase II / Phase III / Phase IV] [In Progress / Complete]
+**Contribution Number:** [1]  
+**Student:** [Will Pressler]  
+**Issue:** [[GitHub issue link](https://github.com/InnerWarden/innerwarden/issues/73)]  
+**Status:** [Phase I] [In Progress]
 
 ---
 
