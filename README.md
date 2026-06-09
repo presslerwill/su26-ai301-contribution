@@ -1,8 +1,8 @@
-# Contribution [1]: [Add executable entropy analyzer for packed/obfuscated malware detection]
+# Contribution [1]: [test(agent): cover honeypot_post_session pure-parser helpers]
 
 **Contribution Number:** [1]  
 **Student:** [Will Pressler]  
-**Issue:** [[GitHub issue link](https://github.com/InnerWarden/innerwarden/issues/73)]  
+**Issue:** [[GitHub issue link](https://github.com/InnerWarden/innerwarden/issues/819)]  
 **Status:** [Phase I] [Complete]
 
 ---
