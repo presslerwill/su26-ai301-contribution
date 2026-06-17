@@ -39,6 +39,8 @@ Furthermore, I wanted to tackle an issue with a tech stack that is new to me. I 
 ### Environment Setup
 
 [Notes on setting up your local development environment - challenges you faced, how you solved them]
+Remember to install RUST! I didn't have Rust installed prior to this...
+I also used a WSL and Kali Linux to run the project as I am on a Windows machine, should be a disclaimer that it is easier to run on Mac or Linux systems.
 
 ### Steps to Reproduce
 
@@ -68,14 +70,16 @@ Furthermore, I wanted to tackle an issue with a tech stack that is new to me. I 
 
 Using UMPIRE framework (adapted):
 
-**Understand:** [Restate the problem]
+**Understand:** After a honeypot is set to detect malicious actors, the honeypot_post_session.rs file runs after the session. It currently is under 80% line coverage so the fucntions in the file need more tests added to 
+the unit test suite to reach sufficient coverage.
 
-**Match:** [What similar patterns/solutions exist in the codebase?]
+**Match:** [What similar patterns/solutions exist in the codebase?] There are other files, such as narrative_autofp.rs, that follow a similar format with unit tests. They can be referenced for how to structure the test 
+suite and what kind of tests should be added.
 
 **Plan:** [Step-by-step implementation plan]
-1. [Modify file X to do Y]
-2. [Add function Z]
-3. [Update tests]
+1. Within the honeypot_post_sessions.rs file, under the #[cfg(test)] heading, add robust tests that test the edge cases and paths without coverage.
+2. Run the existing test suite to see where the tests are covering the source code.
+3. Add unit tests that specifically test uncovered lines in the source code.
 
 **Implement:** [Link to your branch/commits as you work]
 
