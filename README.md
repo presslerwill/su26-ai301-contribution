@@ -44,15 +44,19 @@ I also used a WSL and Kali Linux to run the project as I am on a Windows machine
 
 ### Steps to Reproduce
 
-1. [Step 1]
-2. [Step 2]
-3. [Observed result]
+1. From a WSL2 Kali terminal, install build prerequisites: sudo apt update && sudo apt install -y build-essential pkg-config git
+2. Install Rust via rustup, not Kali's apt package — Kali/Ubuntu ship rustc 1.75, but this repo's Cargo.lock uses lockfile format v4, which requires roughly Rust 1.83+. Running cargo with the apt version fails immediately
+   with lock file version 4 requires -Znext-lockfile-bump. Use: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y then source "$HOME/.cargo/env".
+3. Clone your fork and check out the branch: git clone https://github.com/presslerwill/innerwarden.git && cd innerwarden && git checkout fix-issue-honeypot-coverage
+4. Install the coverage tooling the issue itself uses to measure the gap: rustup component add llvm-tools-preview && cargo install cargo-llvm-cov
+5. Run the command cited in the issue: cargo llvm-cov -p innerwarden-agent --no-fail-fast --json --summary-only, and inspect crates/agent/src/honeypot_post_session.rs.
+Observed result: The file honeypot_post_session.rs is at 61% line coverage (231/378 lines).
 
 ### Reproduction Evidence
 
 - **Commit showing reproduction:** [[Link to commit in your fork]](https://github.com/presslerwill/innerwarden/tree/fix-issue-honeypot-coverage)
 - **Screenshots/logs:** [If applicable]
-- **My findings:** [What you discovered during reproduction]
+- **My findings:** The file honeypot_post_session.rs is at 61% line coverage (231/378 lines). This needs to be increased to at least 80%, the higher the better.
 
 ---
 
