@@ -50,7 +50,7 @@ I also used a WSL and Kali Linux to run the project as I am on a Windows machine
 
 ### Reproduction Evidence
 
-- **Commit showing reproduction:** [Link to commit in your fork]
+- **Commit showing reproduction:** [[Link to commit in your fork]](https://github.com/presslerwill/innerwarden/tree/fix-issue-honeypot-coverage)
 - **Screenshots/logs:** [If applicable]
 - **My findings:** [What you discovered during reproduction]
 
@@ -70,10 +70,12 @@ I also used a WSL and Kali Linux to run the project as I am on a Windows machine
 
 Using UMPIRE framework (adapted):
 
-**Understand:** After a honeypot is set to detect malicious actors, the honeypot_post_session.rs file runs after the session. It currently is under 80% line coverage so the fucntions in the file need more tests added to 
+**Understand:** 
+After a honeypot is set to detect malicious actors, the honeypot_post_session.rs file runs after the session. It currently is under 80% line coverage so the fucntions in the file need more tests added to 
 the unit test suite to reach sufficient coverage.
 
-**Match:** [What similar patterns/solutions exist in the codebase?] There are other files, such as narrative_autofp.rs, that follow a similar format with unit tests. They can be referenced for how to structure the test 
+**Match:** [What similar patterns/solutions exist in the codebase?] 
+There are other files, such as narrative_autofp.rs, that follow a similar format with unit tests. They can be referenced for how to structure the test 
 suite and what kind of tests should be added.
 
 **Plan:** [Step-by-step implementation plan]
@@ -81,11 +83,17 @@ suite and what kind of tests should be added.
 2. Run the existing test suite to see where the tests are covering the source code.
 3. Add unit tests that specifically test uncovered lines in the source code.
 
-**Implement:** [Link to your branch/commits as you work]
+**Implement:** [Link to your branch/commits as you work] 
+[Working branch](https://github.com/presslerwill/innerwarden/tree/fix-issue-honeypot-coverage)
 
 **Review:** [Self-review checklist - does it follow the project's contribution guidelines?]
 
+
 **Evaluate:** [How will you verify it works?]
+I will run the test coverage to ensure that the line and branch coverage has increased above the desired threshold. Also, I will use the debugger to step through each test I added and ensure that each test is robust and 
+tests a real requirement or edge case. 
+The issue also lists these criteria to evaluate my changes: At least 6 new tests under crates/agent/src/honeypot_post_session.rs's #[cfg(test)] mod tests block. cargo test -p innerwarden-agent --bins honeypot_post_session 
+passes. No production code changes — these three functions are already pub(crate) and pure.
 
 ---
 
